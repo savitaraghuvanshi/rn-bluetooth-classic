@@ -1,0 +1,54 @@
+{
+  "name": "rn-bluetooth-classic",
+  "version": "0.0.1",
+  "description": "Implement bluetooth classic (serial) on Android (Bluetooth Adapter) and IOS (External Accessory)",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "tsc": "tsc",
+    "tsc:watch": "tsc --watch",
+    "build": "npm run clean && npm run tsc",
+    "test": "jest",
+    "preversion": "npm run build",
+    "postversion": "git push && git push --tags && npm publish",
+    "release": "npm version prerelease --preid=rc"
+  },
+  "repository": "git://github.com/kenjdavidson/rn-bluetooth-classic.git",
+  "keywords": [
+    "react-native",
+    "bluetooth-classic",
+    "Bluetooth Adapter",
+    "Android",
+    "External Accessory",
+    "IOS"
+  ],
+  "peerDependencies": {
+    "react-native": ">=0.60.0"
+  },
+  "dependencies": {
+    "@react-native-community/netinfo": "^5.9.10",
+    "buffer": "^5.4.3"
+  },
+  "files": [
+    "lib",
+    "android",
+    "ios",
+    "rn-bluetooth-classic.podspec",
+    "react-native.config.js"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.0",
+    "@types/react-native": "^0.63.35",
+    "jest": "^26.6.1",
+    "jest-ts-auto-mock": "^1.0.11",
+    "npm-version": "^1.1.0",
+    "react": "^16.8.6",
+    "react-native": "^0.60.0",
+    "ts-auto-mock": "^2.6.5",
+    "ts-jest": "^26.4.3",
+    "ttypescript": "^1.5.12",
+    "typescript": "^4.0.3"
+  }
+}
